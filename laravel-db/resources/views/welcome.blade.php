@@ -16,8 +16,8 @@
 
 <body>
     <div class="container">
-        @if(Session('message'))
-        <p>{{Session('message')}}</p>
+        @if(session('message'))
+        <p>{{session('message')}}</p>
         @endif
         <form action="{{route('form.save')}}" method="post" class="mt-5">
             @csrf
