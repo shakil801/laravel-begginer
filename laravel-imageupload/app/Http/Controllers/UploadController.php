@@ -16,10 +16,10 @@ class UploadController extends Controller
             // $imageName = time().'.'.$request->image->extension();
             $originalName = $request->image->getClientOriginalName();
             // store public/image directory
-            // $request->image->move(public_path('image'),$originalName);
+            $request->image->move(public_path('image'),$originalName);
 
             // Store the image in the storage folder
-            $path = $request->file('image')->store('public/images');
+            // $path = $request->file('image')->store('public/images');
              // Save image to database or perform other actions as needed
              return back()
              ->with('success','Image uploaded successfully.')

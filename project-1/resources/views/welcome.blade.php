@@ -107,6 +107,17 @@
         width: 100%;
         margin: 10px;
     }
+    form{
+        display: block;
+        width: 100%;
+    }
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #282861;
+    margin: 0;
+    padding: 0;
+
+}
 }
     </style>
 
