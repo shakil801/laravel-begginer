@@ -78,6 +78,17 @@
         .action-links a:hover {
             text-decoration: underline;
         }
+        @media only screen and (max-width: 667px) {
+    .table-container {
+        width: 100%; /* or a suitable percentage */
+        overflow-x: auto; /* Allows horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* Adds smooth scrolling on iOS */
+    }
+    table {
+        width: 100%; /* Ensures the table occupies full width of the container */
+    }
+}
+
     </style>
 </head>
 
