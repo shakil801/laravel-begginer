@@ -24,4 +24,19 @@ class LoginController extends Controller
             'password' => 'Incorrect password.',
         ])->withInput($request->only('email'));
     }
+
+    public function logout(Request $request)
+    {
+        // Log the user out
+        Auth::logout();
+
+        // Invalidate the session
+        $request->session()->invalidate();
+
+        // Regenerate the session token to prevent CSRF attacks
+        $request->session()->regenerateToken();
+
+        // Redirect to the login page or any other page you prefer
+        return redirect('/login')->with('status', 'You have been logged out!');
+    }
 }
